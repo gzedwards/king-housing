@@ -1,4 +1,4 @@
-# The King of Home Renovation
+# king-housing
 
 **Author:** Grant Edwards
 
@@ -56,13 +56,20 @@ Sqft_lot15 - the square footage of the lot of the 15 nearest neighbors.
 
 We started by getting the needed data from our dataframe and making sure there are no missing values and making sure the data that we will be using will be usable for linear regression models. We then can remove a few of the variables that will not be needed for our model such as ‘id’ which just identifies the homes, and should have no effect on our model. We then can then run independent variables through a linear regression model, compare to the price (our dependant variable) to find how much of an effect they have on the outcome of the price. We then can work with our model, removing nonsignificant variables that fail to dismiss the null hypothesis (that there is no significant correlation between the variable and price.) We go further to make sure the data we are using is linear, increasing in price consistently as the independent variable increases, normality (that our values are consistent and a normal bell curve, and the data is homoscedastic and not heteroscedastic. 
 
+Heatmap to see correlation between variables
+![graph3](./Images/Heatmap.png)
+
+Initial Model
+![graph1](./Images/model1.png)
 
 ***
 
 ## Results
 
-
 From the final model we can find answers to our question on what are the most import features for predicting the price of a home, can we accurately predict the price of a home and can we use our model to find homes that are below market value. 
+
+Final Model
+![graph2](./Images/FinalModel.png)
 
 By looking at are t-values, we can find our most significant features are the latitude, the square footage and the grade of the home. The latitude for the property cannot be changed as it is dependent on the location of the home, but with this we can learn that the further north we go into King County, the higher the property value. The grade and the square footage of the home can potentially improve with a remodel. We can also use these variables to begin to identify homes that are potentially being sold under market value. 
 
@@ -70,44 +77,34 @@ We can also find through our R-squared value that 69.9% of home values can be at
 
 Looking at the residuals for our models, we can get a quick view of homes that are on the market for below their predicted values. This could be used to help identify potential properties that are below market value or if there is some variable that can be improved to help increase the homes value. We can do this by looking for residuals with the larger negative values. 
 
-
-![graph1](./Images/model1.png)
-![graph2](./images/genreBudget.png)
-
-
-![graph3](./images/monthROI.png)
-![graph4](./images/MonthSum.png)
-
-
-
-![graph5](./images/directorMystery.png)
-![graph6](./images/directorHorror.png)
-
 ***
 
 ## Conclusions
 
-These results should help us get a good starting position for a new streaming and movie division, creating a solid foundation and giving owners and investors confidence in our high rate of return for the first couple of films. This should lead us to more higher budget films in the future but this would be the best starting course of action and good short term goals. In the event that a movie does not perform well, the lower cost will be easier to bare. I am confident that this will lead to a string start in the launch of a new division. 
+![graph4](./Images/BestHomes.png)
 
-If we procced in this direction it would be good to look at writers, and other key personal for the films. We could also capitalize on other division of Microsoft (such as gaming) to find film ideas, or even look outside the organization, such as at novels and original screenplays. 
+In the above table we are looking at the 20 homes with the highest negative residual values. These homes are well below their predicted values. These homes should have potential for good investment opportunities. Using the independent variables with the strongest affect on our model (latitude, grade, and square foot of living space), we can identify a few homes that would be worth looking into to as potential investments.
 
-Potential issues include potential missing or incorrect data, as well as outdated data. There is also far more factors that affect the success of a movie and streaming services. It would be good to dive deeper and get more in-depth information about the films and consider other factors. 
+Using a linear regression model we can get a decent idea on what the value of a home should be, found the most significant variables affecting the homes value, and help identify homes with high potential to make a profit from. This model can be used to reduce seaching time and quickly identify the highest potential investment properties.
+
+Potential issues include potential missing or incorrect data, as well as features that were not included in our dataset such as outdoor spaces, landscaping features and garage space. 
 ***
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./micro-movie-project.ipynb) or our [presentation](./micro_movie_presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./index.ipynb) or our [presentation](./King-Housing-Presentation.pdf).
 
 For any additional questions, please contact **Grant Edwards, grantedwards11@gmail.com**
 
+***
+
 ## Repository Structure
 
-Describe the structure of your repository and its contents, for example:
 
 ```
-├── README.md                           <- The top-level README for reviewers of this project
-├── micro-movie-project.ipynb           <- Narrative documentation of analysis in Jupyter notebook
+├── README.md                           <- For reviewers of this project
+├── index.ipynb                         <- Narrative documentation of analysis in Jupyter notebook
 ├── micro_movie_presentation.pdf        <- PDF version of project presentation
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+├── data                                <- Sourced externally from historical home sales in King County
+└── Images                              <- Generated from code
 ```
