@@ -61,23 +61,29 @@ We started by getting the needed data from our dataframe and making sure there a
 
 ## Results
 
-We found that Mystery and Horror are both high ROI genres with low cost of production and would make ideal starting genres for a new movie to start this program.
+
+From the final model we can find answers to our question on what are the most import features for predicting the price of a home, can we accurately predict the price of a home and can we use our model to find homes that are below market value. 
+
+By looking at are t-values, we can find our most significant features are the latitude, the square footage and the grade of the home. The latitude for the property cannot be changed as it is dependent on the location of the home, but with this we can learn that the further north we go into King County, the higher the property value. The grade and the square footage of the home can potentially improve with a remodel. We can also use these variables to begin to identify homes that are potentially being sold under market value. 
+
+We can also find through our R-squared value that 69.9% of home values can be attributed to our independent variables. From our current variables we should be able to get a decent prediction on the market value of a home. There are other factors that will contribute to the value of the home, such as the neighborhood, school districts, garage and off street parking, and features on the lot such as mature trees, decks or pools.
+
+Looking at the residuals for our models, we can get a quick view of homes that are on the market for below their predicted values. This could be used to help identify potential properties that are below market value or if there is some variable that can be improved to help increase the homes value. We can do this by looking for residuals with the larger negative values. 
+
+
 ![graph1](./images/genreROI.png)
 ![graph2](./images/genreBudget.png)
-***
-For the release month May had both the highest ROI of all months and a lower number of release dates making it an ideal launch Month.
+
+
 ![graph3](./images/monthROI.png)
 ![graph4](./images/MonthSum.png)
-***
-We also found that James Wan, David F. Sandberg, and M. Night Shyamalan would all make great directors for our starting films with their experience and success in these genres.
+
+
+
 ![graph5](./images/directorMystery.png)
 ![graph6](./images/directorHorror.png)
-***
-Questions to consider:
-* How do you interpret the results?
-* How confident are you that your results would generalize beyond the data you have?
-***
 
+***
 
 ## Conclusions
 
