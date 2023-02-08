@@ -1,4 +1,4 @@
-# king-housing
+# The King of Home Renovation
 
 **Author:** Grant Edwards
 
