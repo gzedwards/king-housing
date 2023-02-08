@@ -71,7 +71,7 @@ We can also find through our R-squared value that 69.9% of home values can be at
 Looking at the residuals for our models, we can get a quick view of homes that are on the market for below their predicted values. This could be used to help identify potential properties that are below market value or if there is some variable that can be improved to help increase the homes value. We can do this by looking for residuals with the larger negative values. 
 
 
-![graph1](./images/genreROI.png)
+![graph1](./Images/model1.png)
 ![graph2](./images/genreBudget.png)
 
 
